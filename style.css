@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewport {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENEDOR DE BOTONES (FLEXBOX) */
+.button-bar {
+  background-color: #333;
+  height: 150px;
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: center; /* Centra los botones verticalmente */
+  gap: 20px; /* Espacio entre botones */
+  padding: 0 20px;
+  border-top: 4px solid #444;
+}
+
+/* EL BOTÓN */
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  /* Flexbox para poner elementos en columna (Imagen arriba, Texto abajo) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px; /* Espacio entre la imagen y el texto */
+
+  width: 120px; /* Ancho suficiente para el texto */
+  transition: transform 0.1s;
+}
+
+/* CONTENEDOR DE LA IMAGEN (Para poder encimar las dos fotos) */
+/* Creamos un div o usamos una técnica para que la imagen mantenga su tamaño */
+.control-btn .img-container {
+  position: relative;
+  width: 80px; /* Tamaño de la imagen del botón */
+  height: 80px;
+}
+
+.control-btn img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.1s;
+}
+
+/* EL TEXTO (Ahora fluye naturalmente debajo) */
+.control-btn p {
+  font-size: 0.85rem;
+  color: antiquewhite;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  /* Ya no necesita z-index porque no está encima */
+}
+
+/* LÓGICA DE CAMBIO DE IMAGEN */
+.img-active {
+  opacity: 0;
+}
+
+.control-btn:active .img-normal {
+  opacity: 0;
+}
+
+.control-btn:active .img-active {
+  opacity: 1;
+}
+
+/* Efecto de hundimiento */
+.control-btn:active {
+  transform: translateY(4px);
+}
