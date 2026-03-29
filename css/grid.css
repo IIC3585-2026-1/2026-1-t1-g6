@@ -1,0 +1,96 @@
+.grid-container {
+  display: grid;
+  height: 100%;
+  
+  grid-template-columns: var(--current-cols, 1fr 1fr);
+  grid-template-rows: var(--current-rows, 1fr 1fr);
+  gap: var(--current-gap, 10px);
+  
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.grid-item {
+  background: #ff6b6b; 
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; 
+}
+
+/* --- ESTILOS ADICIONALES PARA GRID ITEMS (Hijos) --- */
+.children-controls-panel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 4px solid #ff6b6b;
+}
+
+.children-controls-panel h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #ff6b6b;
+  font-family: monospace;
+}
+
+.instruccion-ux {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+
+.dynamic-selectors {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.control-group-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.control-group-inline label {
+  font-size: 0.85rem;
+  color: #ccc;
+  font-family: monospace;
+}
+
+.control-group-inline select {
+  padding: 6px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+.caja-modificada {
+  background: #ff3333 !important;
+  border: 2px dashed white;
+  box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+  z-index: 10;
+}
+
+.btn-reset {
+  background: #ff6b6b;
+  color: #111;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.2s;
+  height: 34px;
+}
+
+.btn-reset:hover {
+  background: #ff8c6b;
+}

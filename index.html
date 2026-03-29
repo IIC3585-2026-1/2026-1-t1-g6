@@ -6,6 +6,7 @@
     <title>Panel de Botones Interactivos</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/flexbox.css" />
+    <link rel="stylesheet" href="css/grid.css" />
   </head>
   <body>
     <main class="viewport">
@@ -81,7 +82,88 @@
       <section id="grid-module" class="module hidden module-card">
         <div class="module-header">
           <span class="badge">04 — Grid</span>
-          <h2>Grid</h2>
+          <h2>El Constructor de Mundos</h2>
+          <p>Define filas, columnas, espaciado y expande elementos específicos.</p>
+        </div>
+
+        <div class="controls-panel">
+          <div class="control-group">
+            <label for="grid-cols">Distribución de Columnas (Ancho):</label>
+            <select id="grid-cols">
+              <option value="1fr 1fr">2 columnas exactamente iguales (1fr 1fr)</option>
+              <option value="repeat(3, 1fr)">3 columnas exactamente iguales (repeat(3, 1fr))</option>
+              <option value="200px 1fr 1fr">1 columna fija de 200px y 2 fluidas (200px 1fr 1fr)</option>
+              <option value="repeat(auto-fit, minmax(80px, 1fr))">Rejilla responsiva automática (auto-fit minmax)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="grid-rows">Distribución de Filas (Alto):</label>
+            <select id="grid-rows">
+              <option value="1fr 1fr">2 filas de igual tamaño (1fr 1fr)</option>
+              <option value="100px 1fr">Fila superior fija (100px), inferior llena el resto (1fr)</option>
+              <option value="auto">Altura automática según el contenido (auto)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="grid-gap">gap:</label>
+            <select id="grid-gap">
+              <option value="10px">10px</option>
+              <option value="20px">20px</option>
+              <option value="0px">0px</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="children-controls-panel">
+          <h3>Modificador Dinámico de Cajas</h3>
+          <p class="instruccion-ux">Selecciona una caja para alterar su tamaño individualmente y romper la rejilla.</p>
+          
+          <div class="dynamic-selectors">
+            <div class="control-group-inline">
+              <label for="target-box">Caja a alterar:</label>
+              <select id="target-box">
+                <option value="1">Caja 1</option>
+                <option value="2">Caja 2</option>
+                <option value="3">Caja 3</option>
+                <option value="4">Caja 4</option>
+                <option value="5">Caja 5</option>
+                <option value="6">Caja 6</option>
+              </select>
+            </div>
+
+            <div class="control-group-inline">
+              <label for="span-cols">Ancho:</label>
+              <select id="span-cols">
+                <option value="1">Normal (1 col)</option>
+                <option value="2">Ocupar 2 cols</option>
+                <option value="3">Ocupar 3 cols</option>
+              </select>
+            </div>
+
+            <div class="control-group-inline">
+              <label for="span-rows">Alto:</label>
+              <select id="span-rows">
+                <option value="1">Normal (1 fila)</option>
+                <option value="2">Ocupar 2 filas</option>
+                <option value="3">Ocupar 3 filas</option>
+              </select>
+            </div>
+            
+            <button id="reset-boxes" class="btn-reset">Restaurar Cajas</button>
+          </div>
+        </div>
+
+        <div class="preview-area">
+          <div class="grid-container" id="grid-zone">
+            <div class="grid-item" id="grid-box-1">1</div>
+            <div class="grid-item" id="grid-box-2">2</div>
+            <div class="grid-item" id="grid-box-3">3</div>
+            <div class="grid-item" id="grid-box-4">4</div>
+            <div class="grid-item" id="grid-box-5">5</div>
+            <div class="grid-item" id="grid-box-6">6</div>
+          </div>
         </div>
       </section>
 
@@ -174,5 +256,6 @@
     </footer>
     <script src="app.js"></script>
     <script src="js/flexbox.js"></script>
+    <script src="js/grid.js"></script>
   </body>
 </html>
