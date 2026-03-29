@@ -21,6 +21,10 @@
   transition: all 0.3s ease; 
 }
 
+#grid-module .controls-panel select{
+  color: #ff6b6b;
+}
+
 /* Estilos pata grid items */
 .children-controls-panel {
   margin-top: 20px;
