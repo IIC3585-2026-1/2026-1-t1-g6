@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/flexbox.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/transformaciones.css" />
+    <link rel="stylesheet" href="css/transiciones.css" />
   </head>
   <body>
     <main class="viewport">
@@ -170,14 +172,100 @@
       <section id="transform-module" class="module hidden module-card">
         <div class="module-header">
           <span class="badge">05 — Transformaciones</span>
-          <h2>Transformaciones</h2>
+          <h2>Laboratorio de Transformaciones</h2>
+          <p>Ajusta la figura para ver cómo se combinan `rotate`, `scale`, `translate` y `skew`.</p>
+        </div>
+
+        <div class="transform-layout">
+          <div class="preview-area transform-preview">
+            <div class="transform-stage">
+              <div class="transform-shape" id="shape-demo" aria-label="Figura transformable"></div>
+            </div>
+          </div>
+
+          <div class="controls-panel transform-controls">
+            <div class="control-group">
+              <label for="rotate">Rotación</label>
+              <input type="range" id="rotate" min="-180" max="180" value="18" />
+              <p class="control-readout" data-output="rotate">18deg</p>
+            </div>
+
+            <div class="control-group">
+              <label for="scale">Escala</label>
+              <input type="range" id="scale" min="50" max="170" value="110" />
+              <p class="control-readout" data-output="scale">1.10</p>
+            </div>
+
+            <div class="control-group">
+              <label for="translateX">Traslación X</label>
+              <input type="range" id="translateX" min="-120" max="120" value="24" />
+              <p class="control-readout" data-output="translateX">24px</p>
+            </div>
+
+            <div class="control-group">
+              <label for="skew">Sesgo</label>
+              <input type="range" id="skew" min="-40" max="40" value="-8" />
+              <p class="control-readout" data-output="skew">-8deg</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="transitions-module" class="module hidden module-card">
         <div class="module-header">
           <span class="badge">06 — Transiciones</span>
-          <h2>Transiciones</h2>
+          <h2>Pista de Transiciones</h2>
+          <p>Compara el mismo recorrido usando `ease`, `linear` y `steps(4)` con una duración configurable.</p>
+        </div>
+
+        <div class="transition-layout">
+          <div class="race-track">
+            <article class="lane">
+              <div class="lane-copy">
+                <span>ease</span>
+                <small>Empieza y termina suave</small>
+              </div>
+              <div class="runner runner-ease">
+                <img src="imgs/skeletonPause.png" alt="Esqueleto quieto" class="runner-asset asset-pause" />
+                <img src="imgs/skeletonRun.gif" alt="Esqueleto corriendo" class="runner-asset asset-run" />
+              </div>
+            </article>
+
+            <article class="lane">
+              <div class="lane-copy">
+                <span>linear</span>
+                <small>Velocidad constante</small>
+              </div>
+              <div class="runner runner-linear">
+                <img src="imgs/skeletonPause.png" alt="Esqueleto quieto" class="runner-asset asset-pause" />
+                <img src="imgs/skeletonRun.gif" alt="Esqueleto corriendo" class="runner-asset asset-run" />
+              </div>
+            </article>
+
+            <article class="lane">
+              <div class="lane-copy">
+                <span>steps(4)</span>
+                <small>Movimiento por saltos</small>
+              </div>
+              <div class="runner runner-steps">
+                <img src="imgs/skeletonPause.png" alt="Esqueleto quieto" class="runner-asset asset-pause" />
+                <img src="imgs/skeletonRun.gif" alt="Esqueleto corriendo" class="runner-asset asset-run" />
+              </div>
+            </article>
+          </div>
+
+          <div class="controls-panel transition-controls">
+            <div class="control-group">
+              <label for="duration">Duración</label>
+              <input type="range" id="duration" min="1" max="6" value="3" />
+              <p class="control-readout" data-output="duration">3s</p>
+            </div>
+
+            <div class="transition-actions">
+              <button id="launch-race" class="action-btn" type="button">Iniciar transición</button>
+              <button id="reset-race" class="action-btn action-btn-secondary" type="button">Reiniciar</button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -257,5 +345,7 @@
     <script src="app.js"></script>
     <script src="js/flexbox.js"></script>
     <script src="js/grid.js"></script>
+    <script src="js/transformaciones.js"></script>
+    <script src="js/transiciones.js"></script>
   </body>
 </html>
