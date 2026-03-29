@@ -5,97 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Botones Interactivos</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/flexbox.css" />
   </head>
   <body>
     <main class="viewport">
-      <h1>Sistema de Control</h1>
-      <p>Presiona los botones inferiores para activar los sistemas.</p>
+      <section id="home-module" class="module active">
+        <h1>Sistema de Control</h1>
+        <p>Presiona los botones inferiores para activar los sistemas.</p>
+      </section>
+
+      <section id="cq-module" class="module hidden module-card">
+        <div class="module-header">
+          <span class="badge">01 — Container Queries</span>
+          <h2>Container Queries</h2>
+        </div>
+      </section>
+
+      <section id="mq-module" class="module hidden module-card">
+        <div class="module-header">
+          <span class="badge">02 — Media Queries</span>
+          <h2>Media Queries</h2>
+        </div>
+      </section>
+
+      <section id="flexbox-module" class="module hidden module-card">
+        <div class="module-header">
+          <span class="badge">03 — Flexbox</span>
+          <h2>El Alineador Universal</h2>
+          <p>Modifica los valores para ver cómo se comportan los elementos en un solo eje.</p>
+        </div>
+
+        <div class="controls-panel">
+          <div class="control-group">
+            <label for="flex-dir">flex-direction:</label>
+            <select id="flex-dir">
+              <option value="row">row</option>
+              <option value="column">column</option>
+              <option value="row-reverse">row-reverse</option>
+              <option value="column-reverse">column-reverse</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="flex-jc">justify-content:</label>
+            <select id="flex-jc">
+              <option value="flex-start">flex-start</option>
+              <option value="center">center</option>
+              <option value="flex-end">flex-end</option>
+              <option value="space-between">space-between</option>
+              <option value="space-around">space-around</option>
+              <option value="space-evenly">space-evenly</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="flex-ai">align-items:</label>
+            <select id="flex-ai">
+              <option value="stretch">stretch</option>
+              <option value="flex-start">flex-start</option>
+              <option value="center">center</option>
+              <option value="flex-end">flex-end</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="preview-area">
+          <div class="flex-container" id="flex-zone">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="grid-module" class="module hidden module-card">
+        <div class="module-header">
+          <span class="badge">04 — Grid</span>
+          <h2>Grid</h2>
+        </div>
+      </section>
+
+      <section id="transform-module" class="module hidden module-card">
+        <div class="module-header">
+          <span class="badge">05 — Transformaciones</span>
+          <h2>Transformaciones</h2>
+        </div>
+      </section>
+
+      <section id="transitions-module" class="module hidden module-card">
+        <div class="module-header">
+          <span class="badge">06 — Transiciones</span>
+          <h2>Transiciones</h2>
+        </div>
+      </section>
+
+      <section id="animations-module" class="module hidden module-card">
+        <div class="module-header">
+          <span class="badge">07 — Animaciones</span>
+          <h2>Animaciones</h2>
+        </div>
+      </section>
+
     </main>
 
     <footer class="button-bar">
-      <button class="control-btn">
+      <button class="control-btn" data-target="home-module">
+        <p>Inicio</p>
+        <div class="img-container">
+          <img src="imgs/boton.png" alt="Normal" class="img-normal" />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+        </div>
+      </button>
+
+      <button class="control-btn" data-target="cq-module">
         <p>Container Queries</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img
-            src="imgs/boton-presionado.png"
-            alt="Presionado"
-            class="img-active"
-          />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
         </div>
       </button>
 
-      <button class="control-btn">
+      <button class="control-btn" data-target="mq-module">
         <p>Media Queries</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img
-            src="imgs/boton-presionado.png"
-            alt="Presionado"
-            class="img-active"
-          />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
         </div>
       </button>
 
-      <button class="control-btn">
+      <button class="control-btn" data-target="flexbox-module">
         <p>Flexbox</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img
-            src="imgs/boton-presionado.png"
-            alt="Presionado"
-            class="img-active"
-          />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
         </div>
       </button>
 
-      <button class="control-btn">
+      <button class="control-btn" data-target="grid-module">
+        <p>Grid</p> <div class="img-container">
+          <img src="imgs/boton.png" alt="Normal" class="img-normal" />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+        </div>
+      </button>
+
+      <button class="control-btn" data-target="transform-module">
         <p>Transformaciones</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img
-            src="imgs/boton-presionado.png"
-            alt="Presionado"
-            class="img-active"
-          />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
         </div>
       </button>
 
-      <button class="control-btn">
+      <button class="control-btn" data-target="transitions-module">
         <p>Transiciones</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img
-            src="imgs/boton-presionado.png"
-            alt="Presionado"
-            class="img-active"
-          />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
         </div>
       </button>
 
-      <button class="control-btn">
-        <p>Transiciones</p>
-        <div class="img-container">
-          <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img
-            src="imgs/boton-presionado.png"
-            alt="Presionado"
-            class="img-active"
-          />
-        </div>
-      </button>
-
-      <button class="control-btn">
+      <button class="control-btn" data-target="animations-module">
         <p>Animaciones</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img
-            src="imgs/boton-presionado.png"
-            alt="Presionado"
-            class="img-active"
-          />
+          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
         </div>
       </button>
     </footer>
+    <script src="app.js"></script>
+    <script src="js/flexbox.js"></script>
   </body>
 </html>
