@@ -23,7 +23,6 @@ body {
   padding: 20px;
 }
 
-/* CONTENEDOR DE BOTONES (FLEXBOX) */
 .button-bar {
   background-color: #333;
   min-height: 150px; 
@@ -36,29 +35,25 @@ body {
   border-top: 4px solid #444;
 }
 
-/* EL BOTÓN */
 .control-btn {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
 
-  /* Flexbox para poner elementos en columna (Imagen arriba, Texto abajo) */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 8px; /* Espacio entre la imagen y el texto */
+  gap: 8px;
 
-  width: 120px; /* Ancho suficiente para el texto */
+  width: 120px;
   transition: transform 0.1s;
 }
 
-/* CONTENEDOR DE LA IMAGEN (Para poder encimar las dos fotos) */
-/* Creamos un div o usamos una técnica para que la imagen mantenga su tamaño */
 .control-btn .img-container {
   position: relative;
-  width: 80px; /* Tamaño de la imagen del botón */
+  width: 80px;
   height: 80px;
 }
 
@@ -72,17 +67,14 @@ body {
   transition: opacity 0.1s;
 }
 
-/* EL TEXTO (Ahora fluye naturalmente debajo) */
 .control-btn p {
   font-size: 0.85rem;
   color: antiquewhite;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  /* Ya no necesita z-index porque no está encima */
 }
 
-/* LÓGICA DE CAMBIO DE IMAGEN */
 .img-active {
   opacity: 0;
 }
@@ -95,7 +87,6 @@ body {
   opacity: 1;
 }
 
-/* Efecto de hundimiento */
 .control-btn:active {
   transform: translateY(4px);
 }

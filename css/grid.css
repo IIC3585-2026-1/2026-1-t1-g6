@@ -21,7 +21,7 @@
   transition: all 0.3s ease; 
 }
 
-/* --- ESTILOS ADICIONALES PARA GRID ITEMS (Hijos) --- */
+/* Estilos pata grid items */
 .children-controls-panel {
   margin-top: 20px;
   margin-bottom: 20px;
