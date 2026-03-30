@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Botones Interactivos</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link rel="stylesheet" href="css/flexbox.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/transformaciones.css" />
@@ -19,23 +20,51 @@
 
       <section id="cq-module" class="module hidden module-card">
         <div class="module-header">
-          <span class="badge">01 — Container Queries</span>
-          <h2>Container Queries</h2>
+          <span class="badge">01 — Queries</span>
+          <h2>Media vs Container Queries</h2>
         </div>
-      </section>
 
-      <section id="mq-module" class="module hidden module-card">
-        <div class="module-header">
-          <span class="badge">02 — Media Queries</span>
-          <h2>Media Queries</h2>
+        <div class="controls-panel">
+          <div class="control-group">
+            <p class="instruccion-ux">
+              Ajusta el ancho del simulador arrastrando desde la derecha:
+            </p>
+          </div>
+        </div>
+
+        <div class="preview-area query-simulator">
+          <div class="resizable-container">
+            <div class="query-card">
+              <div class="card-icon">☝🏽</div>
+              <div class="card-content">
+                <h3>Contenedor 1</h3>
+                <p>El display cambia según el ancho del contenedor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="resizable-container">
+            <div class="query-card">
+              <div class="card-icon">✌🏽</div>
+              <div class="card-content">
+                <h3>Contenedor 2</h3>
+                <p>
+                  El display de los contenedores cambia por el tamaño de la
+                  pantalla.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="flexbox-module" class="module hidden module-card">
         <div class="module-header">
-          <span class="badge">03 — Flexbox</span>
+          <span class="badge">02 — Flexbox</span>
           <h2>El Alineador Universal</h2>
-          <p>Modifica los valores para ver cómo se comportan los elementos en un solo eje.</p>
+          <p>
+            Modifica los valores para ver cómo se comportan los elementos en un
+            solo eje.
+          </p>
         </div>
 
         <div class="controls-panel">
@@ -83,19 +112,29 @@
 
       <section id="grid-module" class="module hidden module-card">
         <div class="module-header">
-          <span class="badge">04 — Grid</span>
+          <span class="badge">03 — Grid</span>
           <h2>El Constructor de Mundos</h2>
-          <p>Define filas, columnas, espaciado y expande elementos específicos.</p>
+          <p>
+            Define filas, columnas, espaciado y expande elementos específicos.
+          </p>
         </div>
 
         <div class="controls-panel">
           <div class="control-group">
             <label for="grid-cols">Distribución de Columnas (Ancho):</label>
             <select id="grid-cols">
-              <option value="1fr 1fr">2 columnas exactamente iguales (1fr 1fr)</option>
-              <option value="repeat(3, 1fr)">3 columnas exactamente iguales (repeat(3, 1fr))</option>
-              <option value="200px 1fr 1fr">1 columna fija de 200px y 2 fluidas (200px 1fr 1fr)</option>
-              <option value="repeat(auto-fit, minmax(80px, 1fr))">Rejilla responsiva automática (auto-fit minmax)</option>
+              <option value="1fr 1fr">
+                2 columnas exactamente iguales (1fr 1fr)
+              </option>
+              <option value="repeat(3, 1fr)">
+                3 columnas exactamente iguales (repeat(3, 1fr))
+              </option>
+              <option value="200px 1fr 1fr">
+                1 columna fija de 200px y 2 fluidas (200px 1fr 1fr)
+              </option>
+              <option value="repeat(auto-fit, minmax(80px, 1fr))">
+                Rejilla responsiva automática (auto-fit minmax)
+              </option>
             </select>
           </div>
 
@@ -103,8 +142,12 @@
             <label for="grid-rows">Distribución de Filas (Alto):</label>
             <select id="grid-rows">
               <option value="1fr 1fr">2 filas de igual tamaño (1fr 1fr)</option>
-              <option value="100px 1fr">Fila superior fija (100px), inferior llena el resto (1fr)</option>
-              <option value="auto">Altura automática según el contenido (auto)</option>
+              <option value="100px 1fr">
+                Fila superior fija (100px), inferior llena el resto (1fr)
+              </option>
+              <option value="auto">
+                Altura automática según el contenido (auto)
+              </option>
             </select>
           </div>
 
@@ -120,8 +163,11 @@
 
         <div class="children-controls-panel">
           <h3>Modificador Dinámico de Cajas</h3>
-          <p class="instruccion-ux">Selecciona una caja para alterar su tamaño individualmente y romper la rejilla.</p>
-          
+          <p class="instruccion-ux">
+            Selecciona una caja para alterar su tamaño individualmente y romper
+            la rejilla.
+          </p>
+
           <div class="dynamic-selectors">
             <div class="control-group-inline">
               <label for="target-box">Caja a alterar:</label>
@@ -152,7 +198,7 @@
                 <option value="3">Ocupar 3 filas</option>
               </select>
             </div>
-            
+
             <button id="reset-boxes" class="btn-reset">Restaurar Cajas</button>
           </div>
         </div>
@@ -171,15 +217,22 @@
 
       <section id="transform-module" class="module hidden module-card">
         <div class="module-header">
-          <span class="badge">05 — Transformaciones</span>
+          <span class="badge">04 — Transformaciones</span>
           <h2>Laboratorio de Transformaciones</h2>
-          <p>Ajusta la figura para ver cómo se combinan `rotate`, `scale`, `translate` y `skew`.</p>
+          <p>
+            Ajusta la figura para ver cómo se combinan `rotate`, `scale`,
+            `translate` y `skew`.
+          </p>
         </div>
 
         <div class="transform-layout">
           <div class="preview-area transform-preview">
             <div class="transform-stage">
-              <div class="transform-shape" id="shape-demo" aria-label="Figura transformable"></div>
+              <div
+                class="transform-shape"
+                id="shape-demo"
+                aria-label="Figura transformable"
+              ></div>
             </div>
           </div>
 
@@ -198,7 +251,13 @@
 
             <div class="control-group">
               <label for="translateX">Traslación X</label>
-              <input type="range" id="translateX" min="-120" max="120" value="24" />
+              <input
+                type="range"
+                id="translateX"
+                min="-120"
+                max="120"
+                value="24"
+              />
               <p class="control-readout" data-output="translateX">24px</p>
             </div>
 
@@ -213,9 +272,12 @@
 
       <section id="transitions-module" class="module hidden module-card">
         <div class="module-header">
-          <span class="badge">06 — Transiciones</span>
+          <span class="badge">05 — Transiciones</span>
           <h2>Pista de Transiciones</h2>
-          <p>Compara el mismo recorrido usando `ease`, `linear` y `steps(4)` con una duración configurable.</p>
+          <p>
+            Compara el mismo recorrido usando `ease`, `linear` y `steps(4)` con
+            una duración configurable.
+          </p>
         </div>
 
         <div class="transition-layout">
@@ -226,8 +288,16 @@
                 <small>Empieza y termina suave</small>
               </div>
               <div class="runner runner-ease">
-                <img src="imgs/skeletonPause.png" alt="Esqueleto quieto" class="runner-asset asset-pause" />
-                <img src="imgs/skeletonRun.gif" alt="Esqueleto corriendo" class="runner-asset asset-run" />
+                <img
+                  src="imgs/skeletonPause.png"
+                  alt="Esqueleto quieto"
+                  class="runner-asset asset-pause"
+                />
+                <img
+                  src="imgs/skeletonRun.gif"
+                  alt="Esqueleto corriendo"
+                  class="runner-asset asset-run"
+                />
               </div>
             </article>
 
@@ -237,8 +307,16 @@
                 <small>Velocidad constante</small>
               </div>
               <div class="runner runner-linear">
-                <img src="imgs/skeletonPause.png" alt="Esqueleto quieto" class="runner-asset asset-pause" />
-                <img src="imgs/skeletonRun.gif" alt="Esqueleto corriendo" class="runner-asset asset-run" />
+                <img
+                  src="imgs/skeletonPause.png"
+                  alt="Esqueleto quieto"
+                  class="runner-asset asset-pause"
+                />
+                <img
+                  src="imgs/skeletonRun.gif"
+                  alt="Esqueleto corriendo"
+                  class="runner-asset asset-run"
+                />
               </div>
             </article>
 
@@ -248,8 +326,16 @@
                 <small>Movimiento por saltos</small>
               </div>
               <div class="runner runner-steps">
-                <img src="imgs/skeletonPause.png" alt="Esqueleto quieto" class="runner-asset asset-pause" />
-                <img src="imgs/skeletonRun.gif" alt="Esqueleto corriendo" class="runner-asset asset-run" />
+                <img
+                  src="imgs/skeletonPause.png"
+                  alt="Esqueleto quieto"
+                  class="runner-asset asset-pause"
+                />
+                <img
+                  src="imgs/skeletonRun.gif"
+                  alt="Esqueleto corriendo"
+                  class="runner-asset asset-run"
+                />
               </div>
             </article>
           </div>
@@ -262,8 +348,16 @@
             </div>
 
             <div class="transition-actions">
-              <button id="launch-race" class="action-btn" type="button">Iniciar transición</button>
-              <button id="reset-race" class="action-btn action-btn-secondary" type="button">Reiniciar</button>
+              <button id="launch-race" class="action-btn" type="button">
+                Iniciar transición
+              </button>
+              <button
+                id="reset-race"
+                class="action-btn action-btn-secondary"
+                type="button"
+              >
+                Reiniciar
+              </button>
             </div>
           </div>
         </div>
@@ -271,35 +365,43 @@
 
       <section id="animations-module" class="module hidden module-card">
         <div class="module-header">
-          <span class="badge">07 — Animaciones</span>
+          <span class="badge">06 — Animaciones</span>
           <h2>Animaciones</h2>
         </div>
       </section>
-
     </main>
+
+    <button
+      class="menu-toggle"
+      onclick="document.body.classList.toggle('sidebar-open')"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
     <footer class="button-bar">
       <button class="control-btn" data-target="home-module">
         <p>Inicio</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+          <img
+            src="imgs/boton-presionado.png"
+            alt="Presionado"
+            class="img-active"
+          />
         </div>
       </button>
 
       <button class="control-btn" data-target="cq-module">
-        <p>Container Queries</p>
+        <p>Queries</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
-        </div>
-      </button>
-
-      <button class="control-btn" data-target="mq-module">
-        <p>Media Queries</p>
-        <div class="img-container">
-          <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+          <img
+            src="imgs/boton-presionado.png"
+            alt="Presionado"
+            class="img-active"
+          />
         </div>
       </button>
 
@@ -307,14 +409,23 @@
         <p>Flexbox</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+          <img
+            src="imgs/boton-presionado.png"
+            alt="Presionado"
+            class="img-active"
+          />
         </div>
       </button>
 
       <button class="control-btn" data-target="grid-module">
-        <p>Grid</p> <div class="img-container">
+        <p>Grid</p>
+        <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+          <img
+            src="imgs/boton-presionado.png"
+            alt="Presionado"
+            class="img-active"
+          />
         </div>
       </button>
 
@@ -322,7 +433,11 @@
         <p>Transformaciones</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+          <img
+            src="imgs/boton-presionado.png"
+            alt="Presionado"
+            class="img-active"
+          />
         </div>
       </button>
 
@@ -330,7 +445,11 @@
         <p>Transiciones</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+          <img
+            src="imgs/boton-presionado.png"
+            alt="Presionado"
+            class="img-active"
+          />
         </div>
       </button>
 
@@ -338,11 +457,16 @@
         <p>Animaciones</p>
         <div class="img-container">
           <img src="imgs/boton.png" alt="Normal" class="img-normal" />
-          <img src="imgs/boton-presionado.png" alt="Presionado" class="img-active" />
+          <img
+            src="imgs/boton-presionado.png"
+            alt="Presionado"
+            class="img-active"
+          />
         </div>
       </button>
     </footer>
     <script src="app.js"></script>
+    <script src="js/queries.js"></script>
     <script src="js/flexbox.js"></script>
     <script src="js/grid.js"></script>
     <script src="js/transformaciones.js"></script>
