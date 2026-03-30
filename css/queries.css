@@ -78,7 +78,7 @@
 
   .preview-area.query-simulator {
     flex-direction: column;
-    height: 70%;
+    height: calc(95% - (40px + 60px));
   }
 
   .resizable-container {
