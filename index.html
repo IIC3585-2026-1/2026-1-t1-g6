@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/transformaciones.css" />
     <link rel="stylesheet" href="css/transiciones.css" />
+    <link rel="stylesheet" href="css/animations.css" />
   </head>
   <body>
     <main class="viewport">
@@ -366,7 +367,26 @@
       <section id="animations-module" class="module hidden module-card">
         <div class="module-header">
           <span class="badge">06 — Animaciones</span>
-          <h2>Animaciones</h2>
+          <h2>Animación de Partículas</h2>
+          <p>Selecciona una secuencia para alterar el estado del núcleo.</p>
+        </div>
+
+        <div class="animation-lab">
+          <div class="preview-area animation-display">
+            <div class="core-container">
+              <div id="anim-target" class="nucleus"></div>
+              <div class="orbit"></div>
+            </div>
+          </div>
+
+          <div class="animation-panel animation-controls">
+            <button class="anim-btn" data-anim="pulse">Pulse</button>
+            <button class="anim-btn" data-anim="float">Float</button>
+            <button class="anim-btn" data-anim="shake">Shake</button>
+            <button class="anim-btn" data-anim="spin-glitch">Spin</button>
+            <button class="anim-btn" data-anim="bounce">Bounce</button>
+            <button class="btn-reset" id="stop-anim">Detener Núcleo</button>
+          </div>
         </div>
       </section>
     </main>
@@ -471,5 +491,6 @@
     <script src="js/grid.js"></script>
     <script src="js/transformaciones.js"></script>
     <script src="js/transiciones.js"></script>
+    <script src="js/animations.js"></script>
   </body>
 </html>
