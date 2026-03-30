@@ -4,7 +4,7 @@
 }
 
 .control-readout {
-  color: #58b8ff;
+  color: var(--accent-color);
   font-weight: 700;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .transition-controls input[type="range"] {
-  accent-color: #58b8ff;
+  accent-color: var(--accent-color);
 }
 
 .race-track {
@@ -114,20 +114,34 @@
   opacity: 0;
 }
 
+.transition-panel {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .transition-actions {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 12px;
+  justify-content: center;
+  gap: 1rem;
+  align-content: center;
 }
 
 .action-btn {
-  border: 1px solid #3e80b3;
-  border-radius: 999px;
-  padding: 12px 18px;
-  background: linear-gradient(135deg, #71c7ff, #4e8dd1);
-  color: #08131f;
-  font-weight: 700;
-  cursor: pointer;
+  background-color: var(--accent-color);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border: none;
+  transition: background 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--hover-color);
 }
 
 .action-btn-secondary {

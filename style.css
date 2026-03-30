@@ -1,3 +1,8 @@
+:root {
+  --accent-color: #e8ff47;
+  --hover-color: #c9ff47;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -140,7 +145,7 @@ body {
   top: 20px;
   left: 20px;
   z-index: 2000;
-  background: var(--primary, #e8ff47);
+  background: var(--accent-color);
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -209,6 +214,13 @@ body {
     height: 90%;
     min-height: 520px;
     margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --accent-color: #f747ff;
+    --hover-color: #ff47d9;
   }
 }
 
