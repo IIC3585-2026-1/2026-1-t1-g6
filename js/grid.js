@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (selectTarget && selectSpanCols && selectSpanRows) {
     
-    const estadoCajas = {
+    const boxStates = {
       1: { col: '1', row: '1' },
       2: { col: '1', row: '1' },
       3: { col: '1', row: '1' },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function aplicarEstiloCaja(id) {
       const caja = document.getElementById(`grid-box-${id}`);
-      const estado = estadoCajas[id];
+      const estado = boxStates[id];
       
       caja.style.gridColumn = `span ${estado.col}`;
       caja.style.gridRow = `span ${estado.row}`;
@@ -48,26 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     selectTarget.addEventListener('change', () => {
       const idActual = selectTarget.value;
-      selectSpanCols.value = estadoCajas[idActual].col;
-      selectSpanRows.value = estadoCajas[idActual].row;
+      selectSpanCols.value = boxStates[idActual].col;
+      selectSpanRows.value = boxStates[idActual].row;
     });
 
     selectSpanCols.addEventListener('change', () => {
       const idActual = selectTarget.value;
-      estadoCajas[idActual].col = selectSpanCols.value;
+      boxStates[idActual].col = selectSpanCols.value;
       aplicarEstiloCaja(idActual);
     });
 
     selectSpanRows.addEventListener('change', () => {
       const idActual = selectTarget.value;
-      estadoCajas[idActual].row = selectSpanRows.value;
+      boxStates[idActual].row = selectSpanRows.value;
       aplicarEstiloCaja(idActual);
     });
 
     if (btnReset) {
       btnReset.addEventListener('click', () => {
         for (let i = 1; i <= 6; i++) {
-          estadoCajas[i] = { col: '1', row: '1' };
+          boxStates[i] = { col: '1', row: '1' };
           aplicarEstiloCaja(i);
         }
         selectSpanCols.value = '1';
